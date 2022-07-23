@@ -1,6 +1,5 @@
 import unittest
 import sys
-sys.path.append( '/home/project/xzceb-flask_eng_fr/final_project/machinetranslation' )
 from translator import englishtofrench, frenchtoenglish
 
 class Testenglishtofrench(unittest.TestCase):
