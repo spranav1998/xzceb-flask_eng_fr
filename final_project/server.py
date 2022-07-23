@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import json
 import sys
 
-sys.path.append('/home/project/xzceb-flask_eng_fr/final_project/machinetranslation')
+sys.path.append('/home/project/xzceb-flask_eng_fr/final_project/machinetranslation/')
 
 app = Flask("Web Translator")
 
@@ -11,13 +11,15 @@ app = Flask("Web Translator")
 def englishtofrench():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
-    return translator.englishtofrench(textToTranslate)
+    frenchtext = translator.englishtofrench(textToTranslate)
+    return frenchtext
 
 @app.route("/frenchtoenglish")
 def frenchtoenglish():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
-    return translator.frenchtoenglish(textToTranslate)
+    englishtext = translator.frenchtoenglish(textToTranslate)
+    return englishtext
 
 @app.route("/")
 def renderIndexPage():
