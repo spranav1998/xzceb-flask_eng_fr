@@ -7,14 +7,14 @@ sys.path.append('/home/project/xzceb-flask_eng_fr/final_project/machinetranslati
 
 app = Flask("Web Translator")
 
-@app.route("/englishtofrench")
-def englishtofrench():
+@app.route("/englishToFrench")
+def englishToFrench():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
     frenchtext = translator.englishtofrench(textToTranslate)
     return frenchtext
 
-@app.route("/frenchtoenglish")
+@app.route("/frenchToEnglish")
 def frenchtoenglish():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
